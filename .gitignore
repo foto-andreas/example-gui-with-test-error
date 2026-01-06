@@ -38,3 +38,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+/build/reports/Chrome_Headless_143.0.0.0_(Windows_10)/karma.xml
