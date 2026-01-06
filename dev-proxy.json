@@ -1,0 +1,14 @@
+{
+    "/posy-officeConnectServer/rest/**": {
+        "target": "http://localhost:10024/",
+        "secure": false
+    },
+    "/posy-officeConnectServer/upload/**": {
+        "target": "http://localhost:10024/",
+        "secure": false
+    },
+    "/posy-officeConnectServer/Online-Hilfe/**": {
+        "target": "http://localhost:10024/",
+        "secure": false
+    }
+}
