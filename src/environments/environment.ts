@@ -7,5 +7,5 @@
 // eslint-disable-next-line
 export const environment = {
     production: false,
-    posyUser: "POSY-Testrunner"
+    posyUser: ""
 };

@@ -11,7 +11,7 @@
     "experimentalDecorators": true,
     "newLine": "CRLF",
     "strict": true,
-    "strictNullChecks": false, // TODO IM-2606: strictNullChecks aktivieren
+    "strictNullChecks": false,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "target": "ES2022",
