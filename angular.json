@@ -55,13 +55,7 @@
               },
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
+              "extractLicenses": true
             },
             "dev": {
               "baseHref": "/example/gui/",
@@ -74,7 +68,6 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "proxyConfig": "dev-proxy.json",
             "port": 6789,
             "buildTarget": "example-gui:build:dev",
             "hmr": false
@@ -98,12 +91,7 @@
             "styles": [
             ],
             "assets": [
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "node_modules/ng2-pdfjs-viewer/pdfjs",
-                "output": "/assets/pdfjs"
-              }
+              "src/assets"
             ]
           }
         },

@@ -9,7 +9,6 @@ module.exports = function (config) {
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
             require('karma-jasmine-html-reporter'),
-            require('karma-coverage'),
             require('karma-junit-reporter'),
             require('@angular-devkit/build-angular/plugins/karma'),
             require('karma-verbose-reporter')
@@ -17,13 +16,6 @@ module.exports = function (config) {
         client: {
             captureConsole: true,
             clearContext: false // leave Jasmine Spec Runner output visible in browser
-        },
-
-        coverageReporter: {
-            reporters:[
-                {type: 'lcov', dir:'coverage/html', subdir: '.'},
-                {type: 'cobertura', dir:'coverage/cobertura', subdir: '.'}
-            ],
         },
 
         junitReporter: {
@@ -36,19 +28,13 @@ module.exports = function (config) {
             properties: {} // key value pair of properties to add to the <properties> section of the report
         },
         // Reporter 'verbose' hinzufügen um detailliertere Informationen zu erhalten.
-        reporters: ['progress', 'kjhtml', 'junit', 'coverage', 'verbose'],
+        reporters: ['progress', 'kjhtml', 'junit', 'verbose'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_DEBUG,
         autoWatch: true,
-        browsers: ["ChromeWithoutSearchSelect"],
-        customLaunchers: {
-            ChromeWithoutSearchSelect: {
-                base: "Chrome",
-                flags: ["--disable-search-engine-choice-screen"],
-            },
-        },
-        singleRun: false,
+        browsers: ["ChromeHeadless"],
+        singleRun: true,
         failOnFailingTestSuite: false
     });
 };
