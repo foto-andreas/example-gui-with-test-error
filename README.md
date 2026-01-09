@@ -53,3 +53,19 @@ Error [ERR_SERVER_NOT_RUNNING]: Server is not running.
   code: 'ERR_SERVER_NOT_RUNNING'
 }
 ```
+
+## Solution:
+Ha! I do not understand the solution, but it seems to work in our production code and in this example repo:
+
+In angular.json change
+```
+"builder": "@angular-devkit/build-angular:karma",
+```
+to 
+```
+"builder": "@angular/build:karma",
+```
+and make the polyfills string an array: 
+```
+"polyfills": [ "src/polyfills.ts" ],
+```
